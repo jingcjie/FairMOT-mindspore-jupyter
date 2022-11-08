@@ -1,3 +1,6 @@
 /ckpt/
 /.idea
 /src/utils/crowdhuman_dla34.pth
+/test/
+/data/
+/results/

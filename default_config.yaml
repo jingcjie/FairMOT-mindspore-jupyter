@@ -39,7 +39,7 @@ track_buffer: 30
 min-box-area: 100
 output-format: "video"
 
-data_dir: "/home/ubuntu/dataset"
+data_dir: "./test"
 
 # loss
 mse_loss: False
