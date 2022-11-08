@@ -10,16 +10,13 @@ The mindspore version FairMOT with jupyter notebook.
 
 ## Model introduce
 FairMOT is a target detection framework proposed by Huazhong University of Science and Technology and Microsoft Research Asia. All FairMOT improvements to previous methods come from the following three viewpoints:
-1. Anchors are not friendly to Re-ID, and the anchor-free algorithm should be used.
-
+1. Anchors are not friendly to Re-ID, so the anchor-free algorithm should be used.
 2. Multi-layer feature fusion should be performed.
-
 3. For the one-shot method, it is better to use a low dimension for the feature vector of Re-ID.
 
 On MOT15, MOT16, MOT17, MOT20 and other datasets, the frame number of 30fps has reached the current SOTA level.
 Most of the existing SOTA methods use a two-step approach:
 1. The target is detected by the target detection algorithm.
-
 2. The features are obtained through the Re-ID model, and the ID is obtained by comparison.
 
 Although with the development of target detection algorithm and Re-ID in recent years, the two-step method also has obvious performance improvement in target tracking, but the two-step method does not share the feature map of the detection algorithm and Re-ID, so its speed Very slow and difficult to infer at video rates.
@@ -32,8 +29,8 @@ In the detection network, the three results of heatmap, box size, and center off
 
 FairMOT itself does not emphasize the type of model neural network, as long as the encoder-decoder type is satisfied. Here we use HR-Net (the previous paper of the same institution) as the specific model used.
 
-### data set
-Since there are many datasets used by FairMOT, the specific file structure refers to the [Dataset] (https://github.com/Zhongdao/Towards-Realtime-MOT/blob/master/DATASET_ZOO.md).
+### Dataset
+Since there are many datasets used by FairMOT, the specific file structure refers to the [Dataset](https://github.com/Zhongdao/Towards-Realtime-MOT/blob/master/DATASET_ZOO.md).
 In the implementation using MindSpore, unlike pytorch, we do not need to inherit the parent class in Mindspore. The implemented dataset class only needs to implement the three functions of init, get_item, and len.
 The dataset needs to be passed to GeneratorDataset in mindspore.dataset to use.
 
