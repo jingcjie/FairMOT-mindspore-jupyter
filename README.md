@@ -255,17 +255,6 @@ class JointDataset:
         img = np.array(img, dtype=np.float32) / 255
         img = img.transpose((2, 0, 1))
         return img, labels, img_path
-
-
-dataset_root = "./data"
-train_set_paths = {
-        "cuhksysu":"cuhksysu.train"
-    }
-
-
-
-Ms_dataset = Ms_dataset.batch(batch_size=4, drop_remainder=True)
-batch_dataset_size = Ms_dataset.get_dataset_size()
 ```
 Notice that it need to be feed into GeneratorDataset to create a dataset which can be used in mindspore.
 
