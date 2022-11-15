@@ -1,13 +1,13 @@
 # basic experiment setting
 device: "GPU"
-workers: 6
+workers: 2
 load_model: "./ckpt/Fairmot_0_1-30_5603.ckpt"
 load_pre_model: "./crowdhuman_dla34_ms.ckpt"
 data_cfg: "./data/data.json"
 arch: "dla_34"
-num_epochs: 30
+num_epochs: 1
 lr: 0.0001
-batch_size: 2
+batch_size: 1
 input-video: "/videos/MOT16-03.mp4"
 output-root: "./exports"
 is_modelarts: False

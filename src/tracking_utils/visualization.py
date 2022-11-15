@@ -29,7 +29,8 @@ def get_color(idx):
 
 def plot_tracking(image, tlwhs, obj_ids, frame_id=0, fps=0., ids2=None):
     """plot tracking"""
-    im = np.ascontiguousarray(np.copy(image))
+    im = image.asnumpy()
+    im = np.ascontiguousarray(im)
 
     text_scale = max(1, image.shape[1] / 1600.)
     text_thickness = 2
